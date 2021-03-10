@@ -1,4 +1,4 @@
-#DW and rpts connector
+#DW connector example
 import sqlalchemy as db
 from sqlalchemy import exc
 from sqlalchemy import inspect
@@ -14,7 +14,7 @@ def engine(dbname):
         dns = 'path2'+'@'+dbname
     return db.create_engine(dns, max_identifier_length=128)
                
-#connect DW or rpts
+#connect DW
 def connect(dbname):
     myeng = engine(dbname)
     try: 
